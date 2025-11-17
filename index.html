@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С Днём Рождения, София! 🎉</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Фон с конфетти -->
+    <div id="confetti-container"></div>
+    
+    <!-- Главный контейнер -->
+    <div class="container">
+        <!-- Заголовок -->
+        <header class="header">
+            <h1 class="title">🎂 С Днём Рождения! 🎉</h1>
+            <h2 class="subtitle">София, этот сайт создан специально для тебя!</h2>
+        </header>
+
+        <!-- Блок с поздравлением -->
+        <section class="greeting-section">
+            <div class="card">
+                <div class="cat-animation">😺</div>
+                <p class="message">
+                    Дорогая София!<br>
+                    Поздравляю тебя с днём рождения! 🎊<br>
+                    Ты прошла все испытания и заслужила этот особенный подарок!
+                </p>
+            </div>
+        </section>
+
+        <!-- Галерея воспоминаний -->
+        <section class="gallery-section">
+            <h3>🎁 Твои подарки:</h3>
+            <div class="gifts-grid">
+                <div class="gift-card" onclick="showGift(1)">
+                    <div class="gift-icon">💝</div>
+                    <h4>Персональное послание</h4>
+                    <p>Особенные слова только для тебя</p>
+                </div>
+                <div class="gift-card" onclick="showGift(2)">
+                    <div class="gift-icon">🎵</div>
+                    <h4>Музыкальный сюрприз</h4>
+                    <p>Плейлист для настроения</p>
+                </div>
+                <div class="gift-card" onclick="showGift(3)">
+                    <div class="gift-icon">📸</div>
+                    <h4>Фото-сюрприз</h4>
+                    <p>Что-то особенное</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Таймер до следующего ДР -->
+        <section class="timer-section">
+            <h3>⏰ До следующего дня рождения:</h3>
+            <div id="countdown" class="countdown">
+                <div class="time-unit">
+                    <span id="days">365</span>
+                    <small>дней</small>
+                </div>
+                <div class="time-unit">
+                    <span id="hours">00</span>
+                    <small>часов</small>
+                </div>
+                <div class="time-unit">
+                    <span id="minutes">00</span>
+                    <small>минут</small>
+                </div>
+                <div class="time-unit">
+                    <span id="seconds">00</span>
+                    <small>секунд</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секретный раздел -->
+        <section class="secret-section">
+            <button class="secret-btn" onclick="revealSecret()">
+                🎭 Нажми для секретного послания
+            </button>
+            <div id="secret-message" class="secret-message hidden">
+                <p>Ты самая удивительная! Помни это всегда! 💫</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Модальные окна для подарков -->
+    <div id="gift-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Аудио для фоновой музыки -->
+    <audio id="bg-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
